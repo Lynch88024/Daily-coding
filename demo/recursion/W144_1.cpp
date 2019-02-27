@@ -8,7 +8,7 @@
 #include <cstdio> 
 using namespace std;
 
-int tower(int n)
+long long tower(int n)
 {
     if(n == 1)
     {
@@ -24,7 +24,7 @@ int tower(int n)
 int main()
 {
     int n = 12;
-    int ans = tower(n);
+    long long ans = tower(n);
     cout << ans << endl;
 
     return 0;

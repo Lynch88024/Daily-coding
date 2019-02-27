@@ -81,7 +81,7 @@ void FF(int index)
 
 int main()
 {
-    n = 8;   
+    n = 5;   
     FF(1);
     cout << count << endl;
 
