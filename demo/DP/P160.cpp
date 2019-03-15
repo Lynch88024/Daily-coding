@@ -42,9 +42,13 @@ void find_prime() // 求素数表
 
 void find_prime_nb() // 埃氏筛法
 {
+    for(int i=0; i<maxn; i++)
+    {
+        is_prime[i] = true;
+    }
     for(int i=2; i<maxn; i++)
     {
-        if(isPrime(i) == true)
+        if(is_prime[i] == true)
         {
             prime[prime_num++] = i;
             for(int j=i+i; j<maxn; j+=i)
