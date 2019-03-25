@@ -13,7 +13,20 @@ struct Node
     vector<int> child;
 }node[maxn];
 
-void layerorder(int root)
+void DFS(int index) // DFS
+{
+    if(node[index].child.size() == 0)
+    {
+        return ;
+    }
+    for(int i=0; i<node[index].child.size(); i++)
+    {
+        node[node[index].child[i]].layer = node[index].layer + 1;
+        DFS(node[index].child[i]); 
+    }
+}
+
+void layerorder(int root) // BFS
 {
     queue<int> q;
     node[root].layer = 0;
@@ -49,7 +62,8 @@ int main()
             node[temp].child.push_back(i);
         }
     }
-    layerorder(root);
+    //layerorder(root);
+    DFS(root);
     int layer_max = -1, layer_cnt = 0;
     for(int i=0; i<n; i++)
     {

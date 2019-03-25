@@ -15,6 +15,19 @@ struct Node
     vector<int> child;
 }node[maxn];
 
+void DFS(int index)
+{
+    if(node[index].child.size() == 0)
+    {
+        return ;
+    }
+    for(int i=0; i<node[index].child.size(); i++)
+    {
+        node[node[index].child[i]].layer = node[index].layer + 1;
+        DFS(node[index].child[i]);
+    }
+} 
+
 void levelorder(int root)
 {
     queue<int> q;
@@ -61,7 +74,8 @@ int main()
             }
         }
     }
-    levelorder(0);
+    //levelorder(0);
+    DFS(0);
     double price = 0.0;
     for(int i=0; i<n; i++)
     {
