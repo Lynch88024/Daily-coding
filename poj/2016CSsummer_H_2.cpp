@@ -36,7 +36,7 @@ int findFather(int x)
     return x;
 }
 
-int krusral(int n, int m) // n为结点数，m为边数
+int kruskal(int n, int m) // n为结点数，m为边数
 {
     int ans = 0; // 边长和
     int num_edge = 0; // 选取边的个数
@@ -99,7 +99,7 @@ int main()
             }
         }
         int ans = 0;
-        ans = krusral(n, k);
+        ans = kruskal(n, k);
         printf("%d\n", ans);
     }
     fclose(stdin);
