@@ -21,7 +21,7 @@ int dz[6] = {0, 0, 0, 0, 1, -1};
 int dx[6] = {0, 0, 1, -1, 0, 0};
 int dy[6] = {1, -1, 0, 0, 0, 0}; 
 
-int L, R, C;
+int L, R, C; 
 
 void init()
 {
@@ -88,7 +88,7 @@ void print(int ans)
 
 int main()
 {
-    freopen("input.txt", "r", stdin);
+    //freopen("input.txt", "r", stdin);
     while(cin >> L >> R >> C)
     {
         if(L==0 && R==0 && C==0)
@@ -126,7 +126,7 @@ int main()
         int ans = BFS();
         print(ans);
     }
-    fclose(stdin);
+    //fclose(stdin);
 
     return 0;
 }
