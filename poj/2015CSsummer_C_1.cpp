@@ -11,7 +11,7 @@ int row, col;
 
 int main()
 {
-    freopen("input.txt", "r", stdin);
+    // freopen("input.txt", "r", stdin);
     scanf("%d %d", &row, &col);
     for(int x=0; x<row; x++)
     {
@@ -30,7 +30,7 @@ int main()
             }
         }
     }
-    fclose(stdin);
+    // fclose(stdin);
 
     return 0;
 }

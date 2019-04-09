@@ -113,15 +113,7 @@ int main()
         }
     }
     Dijkstra(0, cnt);
-    double max_ = 0.0;
-    for(int i=0; i<cnt; i++)
-    {
-        if(d[i] > max_)
-        {
-            max_ = d[i];
-        }
-    }
-    printf("%.0lf", max_);
+    printf("%.0lf", d[1]); // 终点距离
     fclose(stdin);
 
     return 0;
